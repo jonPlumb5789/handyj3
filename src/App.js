@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Element } from 'react-scroll';
+import Header from './components/Header';
+import HeroSection from './components/HeroSection';
+import AboutSection from './components/AboutSection';
+import ServicesSection from './components/ServicesSection';
+import GetInTouch from './components/GetInTouch';
+import ContactInformation from './components/ContactInformation';
+import Footer from './components/Footer';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Element name="hero"><HeroSection /></Element>
+      <Element name="about"><AboutSection /></Element>
+      <Element name="services"><ServicesSection /></Element>
+      <Element name="get-in-touch"><GetInTouch /></Element> {/* Updated */}
+      <Element name="contact-info"><ContactInformation /></Element> {/* Updated */}
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
